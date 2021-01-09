@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2020 at 10:32 AM
+-- Generation Time: Jan 09, 2021 at 05:15 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -34,7 +35,7 @@ CREATE TABLE `student` (
   `firstname` varchar(30) NOT NULL,
   `middlename` varchar(30) NOT NULL,
   `gender` varchar(10) NOT NULL,
-  `homeAddress` int(50) NOT NULL,
+  `homeAddress` varchar(50) NOT NULL,
   `contactNo` varchar(14) NOT NULL,
   `course` varchar(50) NOT NULL,
   `department` varchar(50) NOT NULL,
@@ -46,8 +47,8 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`userID`, `studentNo`, `lastname`, `firstname`, `middlename`, `gender`, `homeAddress`, `contactNo`, `course`, `department`, `year`) VALUES
-(1, '12-15513', 'Jacinto', 'Michael Jude', 'Ong', 'Male', 0, '09395748611', 'BSIT', 'Computer Studies', 3),
-(3, '13-11111', 'Jacinto', 'Joyce', 'Ong', 'Female', 0, '09395748612', 'BSN', 'Nursing', 2);
+(1, '12-15513', 'Jacinto', 'Michael Jude', 'Ong', 'Male', 'Naga City', '09395748613', 'BSIT', 'CS', 3),
+(2, '20-15560', 'Jacinto', 'Joyce', 'Ong', 'Female', 'Naga City', '09395748614', 'BSN', 'CN', 2);
 
 --
 -- Indexes for dumped tables
@@ -68,7 +69,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
